@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-box {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-box h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-box label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-box input:focus {
+            outline: none;
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+        }
+
+        .form-box button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4f46e5;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-box button:hover {
+            background-color: #4338ca;
+        }
+
+        .form-box p {
+            font-size: 0.875rem;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .b_a{
+            color:white;
+            text-decoration: none;
+        }
+
+        .form-box a:hover {
+            text-decoration: underline;
+        }
+        .p_a{
+            color:blue;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        // Prevent form submission
+        function preventSubmission(event) {
+            event.preventDefault();
+            alert("Sign Up button clicked. No connection or redirection occurs.");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <h2>Sign Up</h2>
+            <form onsubmit="preventSubmission(event)">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit"><a  class="b_a" href="login.html">Sign Up</a></button>
+            </form>
+            <p>
+                Already have an account?
+                <a  class="p_a" href="login.html">Log In</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
